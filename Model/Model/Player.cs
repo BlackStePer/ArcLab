@@ -1,9 +1,4 @@
 ﻿using System;
-<<<<<<< HEAD
-
-=======
->>>>>>> unityView
-
 namespace Model
 {
     /// <summary>
