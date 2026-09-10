@@ -1,8 +1,6 @@
 ﻿using Model.Bosses;
 using Model.BossesAttacks;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Model
 {

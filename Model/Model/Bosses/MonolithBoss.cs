@@ -1,4 +1,5 @@
 ﻿using Model.BossesAttacks;
+using System;
 
 namespace Model.Bosses
 {
@@ -18,7 +19,7 @@ namespace Model.Bosses
         /// <summary> Переключает индекс на следующую атаку в массиве по кругу. </summary>
         private void ChangeAttackIndex()
         {
-            if (_currentBossAttackIndex + 1 == _bossAttacks.Count())
+            if (_currentBossAttackIndex + 1 == _bossAttacks.Length)
                 _currentBossAttackIndex = 0;
             else
                 _currentBossAttackIndex++;
