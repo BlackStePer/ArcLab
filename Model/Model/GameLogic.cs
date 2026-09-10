@@ -1,7 +1,10 @@
 ﻿using Model.Bosses;
 using Model.BossesAttacks;
 using System;
+<<<<<<< HEAD
 
+=======
+>>>>>>> unityView
 
 namespace Model
 {
