@@ -1,7 +1,5 @@
-﻿using Model.BossesAttacks;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+
 
 namespace Model
 {
@@ -21,7 +19,7 @@ namespace Model
         public event Action PlayerDied;
 
         /// <summary> Событие, вызываемое при получении игроком урона. </summary>
-        public event Action DamageTaked;
+        public event Action DamageTaken;
 
         public Player()
         {
@@ -54,7 +52,7 @@ namespace Model
             }
             else
             {
-                DamageTaked?.Invoke();
+                DamageTaken?.Invoke();
             }
         }
 

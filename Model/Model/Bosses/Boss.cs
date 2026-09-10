@@ -1,4 +1,5 @@
 ﻿using Model.BossesAttacks;
+using System;
 
 namespace Model.Bosses
 {
@@ -9,7 +10,7 @@ namespace Model.Bosses
     {
         public int HP { get; protected set; }
         public int MaxHP { get; protected set; }
-        protected string _name;
+        public string Name { get; protected set; }
         protected BossAttack[] _bossAttacks;
 
         /// <summary> Событие, вызываемое при запуске боссом любой атаки.</summary>
@@ -19,7 +20,7 @@ namespace Model.Bosses
         public event Action BossDied;
 
         /// <summary> Событие, вызываемое при получении боссом урона.</summary>
-        public event Action DamageTaked;
+        public event Action DamageTaken;
 
         /// <summary>
         /// Запускает следующую по очереди атаку босса.
@@ -42,7 +43,7 @@ namespace Model.Bosses
         /// <summary> Вызов события DamageTaked из классов-наследников. </summary>
         protected void OnDamageTaked()
         {
-            DamageTaked?.Invoke();
+            DamageTaken?.Invoke();
         }
 
         /// <summary> Вызов события BossDied из классов-наследников. </summary>

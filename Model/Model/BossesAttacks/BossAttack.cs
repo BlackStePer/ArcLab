@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Model.BossesAttacks
+﻿namespace Model.BossesAttacks
 {
     /// <summary>
     /// Перечисление типов атак босса.

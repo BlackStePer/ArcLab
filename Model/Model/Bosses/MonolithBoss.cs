@@ -1,4 +1,5 @@
 ﻿using Model.BossesAttacks;
+using System;
 
 namespace Model.Bosses
 {
@@ -12,13 +13,14 @@ namespace Model.Bosses
         {
             HP = 1000;
             MaxHP = 1000;
-            _name = "Босс Монолит";
+            Name = "Босс Монолит";
+            _bossAttacks = new BossAttack[] { new ShockwaveAttack(), new RockRainAttack(), new LaserPlatesAttack() };
         }
 
         /// <summary> Переключает индекс на следующую атаку в массиве по кругу. </summary>
         private void ChangeAttackIndex()
         {
-            if (_currentBossAttackIndex + 1 == _bossAttacks.Count())
+            if (_currentBossAttackIndex + 1 == _bossAttacks.Length)
                 _currentBossAttackIndex = 0;
             else
                 _currentBossAttackIndex++;
@@ -37,7 +39,7 @@ namespace Model.Bosses
 
         public override void TakeDamage(int damage)
         {
-            HP = Math.Max(0, damage);
+            HP = Math.Max(0, HP - damage);
             if (HP > 0)
                 OnDamageTaked();
             else
