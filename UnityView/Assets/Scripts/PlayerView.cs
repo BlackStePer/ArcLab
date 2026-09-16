@@ -1,16 +1,10 @@
+using Model;
 using UnityEngine;
 
 public class PlayerView : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private BattleManager _battleManager;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public BattleManager BattleManager => _battleManager;
+    public Player PlayerLogic { get; private set; } = new Player();
 }

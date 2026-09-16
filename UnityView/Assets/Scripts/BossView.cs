@@ -1,16 +1,11 @@
+using Model;
+using Model.Bosses;
 using UnityEngine;
 
 public class BossView : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private BattleManager _battleManager;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public BattleManager BattleManager => _battleManager;
+    public MonolithBoss BossLogic { get; private set; } = new MonolithBoss();
 }
